@@ -51,6 +51,10 @@ while endGame == 0:
 			map_level = open('Level2.txt','r')
 		elif diff == 3
 			map_level = open('Level3.txt', 'r')
+		
+		map_contents = map_level.read()
+		print (map_contents)
+		map_level.close()
 			
 		state = 2
 		endGame = 1
