@@ -17,7 +17,11 @@ key = -1
 while endGame == 0:
 	if choice == 1:
 		# print welcome screen 
-		print("**************************\n  THE MINOTAUR GAME  \nBy: Steph, Zach and Greg\n**************************\nUse the keys A, S, W, and D to navigate\nthrough the maze. You must\nmove Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).\nTo begin, press G. To exit, press E.")
+		print("**************************\n  THE MINOTAUR GAME  \n")
+		print("By: Steph, Zach and Greg\n**************************\n")
+		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must\n")
+		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).\n")
+		print("To begin, press G. To exit, press E.")
 	key = getch.getch() # gets user input 
 	if key == 'G':
 		state = 1
