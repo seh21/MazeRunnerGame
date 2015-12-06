@@ -46,15 +46,17 @@ while endGame == 0:
 		# initialize and generate map 
 		
 		if diff == 1
-			map_level = open('Level1.txt', 'r')
+			with open("Level1.txt", "w+")
+				for line in file:
+					print line 
 		elif diff == 2
-			map_level = open('Level2.txt','r')
+			with open("Level2.txt", "w+")
+				for line in file:
+					print line 
 		elif diff == 3
-			map_level = open('Level3.txt', 'r')
-		
-		map_contents = map_level.read()
-		print (map_contents)
-		map_level.close()
+			with open("Level3.txt", "w+")
+				for line in file:
+					print line 
 			
 		state = 2
 		endGame = 1
