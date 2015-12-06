@@ -22,7 +22,7 @@ while endGame == 0:
 		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must\n")
 		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).\n")
 		print("To begin, press G. To exit, press E.")
-		key = getch.getch() # gets user input 
+		key = raw_input() # gets user input 
 		if key == 'G':
 			# clear the screen 
 			state = 1
