@@ -9,6 +9,7 @@ thes_y = 7
 
 state = 0 # states of state machine
 diff = 1
+goGame = 0
 endGame = 0 # boolean for end of game 
 key = -1 # user input key selection
 
@@ -16,24 +17,29 @@ key = -1 # user input key selection
 while endGame == 0:
 	if state == 0:
 		# print welcome screen 
-		print("**************************\n  THE MINOTAUR GAME  \n")
-		print("By: Steph, Zach and Greg\n**************************\n")
-		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must\n")
-		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).\n")
+		print("**************************\n  THE MINOTAUR GAME")
+		print("By: Steph, Zach and Greg\n**************************")
+		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
+		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).")
 		print("To begin, press G. To exit, press E.")
 		key = raw_input() # gets user input 
-		if key == 'G':
-			# clear the screen 
+		if key == 'G' or key == 'g':
 			state = 1
-		elif key == 'E':
+		elif key == 'E' or key == 'e':
 			endGame = 1
 			break
-		else:
+		else
 			state = 0 
+		os.system("clear")
 	if state == 1:
 		# initialize and generate map 
-		print("There are 3 Levels: 1-Easiest 3-Hardest")
-		diff = raw_input("Enter a difficulty: ")
+		while goGame == 0
+			print("There are 3 Levels: 1-Easiest 3-Hardest")
+			diff = raw_input("Enter a difficulty: ")
+			if diff < 4 and diff > 0
+				goGame = 1
+			if goGame == 0
+				print("Invalid difficulty!")
 		print(diff)
 		state = 2
 		endGame = 1
