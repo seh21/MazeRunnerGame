@@ -10,6 +10,7 @@ thes_x = 1
 thes_y = 7
 
 state = 0 # states of state machine
+diff = 1
 endGame = 0 # boolean for end of game 
 key = -1 # user input key selection
 
@@ -33,6 +34,9 @@ while endGame == 0:
 			state = 0 
 	if state == 1:
 		# initialize and generate map 
+		print("There are 3 Levels: 1-Easiest 3-Hardest)
+		diff = raw_input("Enter a difficulty: ")
+		print(diff)
 		state = 2
 	if state == 2:
 		thes_x_prev = thes_x
