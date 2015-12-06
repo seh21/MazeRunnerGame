@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import os
 # Declare initial positions of the Minotaur and Theseus 
 minotaur_x = 1
 minotaur_y = 1
@@ -16,7 +16,8 @@ key = -1 # user input key selection
 # Loop until game ends (player loses the game)
 while endGame == 0:
 	if state == 0:
-		os.system("clear")
+		# clear screen
+		os.system("clear");
 		# print welcome screen 
 		print("**************************\n  THE MINOTAUR GAME")
 		print("By: Steph, Zach and Greg\n**************************")
@@ -31,16 +32,16 @@ while endGame == 0:
 			break
 		else:
 			state = 0 
-		os.system("clear") 	# clear screen 
 	if state == 1:
 		# initialize and generate map 
 		while goGame == 0:
 			print("There are 3 Levels: 1-Easiest 3-Hardest")
 			diff = raw_input("Enter a difficulty: ")
-			if diff < '4' and diff > '0':
+			if diff < "4" and diff > "0":
 				goGame = 1
 			if goGame == 0:
 				print("Invalid difficulty!")
+		print(diff)
 		os.system("clear") 	# clear screen 
 		
 		if diff == 1
