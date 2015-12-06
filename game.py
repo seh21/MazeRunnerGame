@@ -10,12 +10,12 @@ thes_x = 1
 thes_y = 7
 
 state = -1 # states of state machine
-endGame = 0
-key = -1
+endGame = 0 # boolean for end of game 
+key = -1 # user input key selection
 
 # Loop until game ends (player loses the game)
 while endGame == 0:
-	if choice == 1:
+	if state == 0:
 		# print welcome screen 
 		print("**************************\n  THE MINOTAUR GAME  \n")
 		print("By: Steph, Zach and Greg\n**************************\n")
@@ -24,9 +24,29 @@ while endGame == 0:
 		print("To begin, press G. To exit, press E.")
 	key = getch.getch() # gets user input 
 	if key == 'G':
+		# clear the screen 
 		state = 1
 	elif key = 'E':
 		endGame = 1
 		break
 	else;
 		state = 0 
+
+	if state == 1:
+		# initialize and generate map 
+		state = 2
+	if state == 2:
+		thes_x_prev = thes_x
+		thes_y_prev = thes_y
+		
+		dir = getch.getch()
+		
+		if dir == 'd'
+		elif dir == 's'
+		elif dir == 'a'
+		elif dir == 'w'
+		elif dir == 'E'
+			# exit game 
+			break 
+		
+		
