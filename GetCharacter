@@ -1,8 +1,0 @@
-#!/usr/bin/env python3
-
-import GetInput
-
-def getChar(UNIX):
-	if UNIX == 1:
-		char = (GetInput.getch.impl()).decode("utf-8")
-	return char
