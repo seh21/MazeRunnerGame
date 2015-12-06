@@ -41,6 +41,13 @@ while endGame == 0:
 			if goGame == 0
 				print("Invalid difficulty!")
 		print(diff)
+		if diff == 1
+			map_level = open('Level1.txt', 'r')
+		elif diff == 2
+			map_level = open('Level2.txt','r')
+		elif diff == 3
+			map_level = open('Level3.txt', 'r')
+			
 		state = 2
 		endGame = 1
 #	if state == 2:
