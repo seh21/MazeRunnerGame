@@ -16,6 +16,7 @@ key = -1 # user input key selection
 # Loop until game ends (player loses the game)
 while endGame == 0:
 	if state == 0:
+		os.system("clear")
 		# print welcome screen 
 		print("**************************\n  THE MINOTAUR GAME")
 		print("By: Steph, Zach and Greg\n**************************")
@@ -28,21 +29,20 @@ while endGame == 0:
 		elif key == 'E' or key == 'e':
 			endGame = 1
 			break
-		else
+		else:
 			state = 0 
 		os.system("clear") 	# clear screen 
 	if state == 1:
 		# initialize and generate map 
-		while goGame == 0
+		while goGame == 0:
 			print("There are 3 Levels: 1-Easiest 3-Hardest")
 			diff = raw_input("Enter a difficulty: ")
-			if diff < 4 and diff > 0
+			if diff < '4' and diff > '0':
 				goGame = 1
-			if goGame == 0
+			if goGame == 0:
 				print("Invalid difficulty!")
-		print(diff)
-		
 		os.system("clear") 	# clear screen 
+		
 		if diff == 1
 			map_level = open('Level1.txt', 'r')
 		elif diff == 2
