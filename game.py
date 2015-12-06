@@ -27,14 +27,14 @@ while endGame == 0:
 		if key == 'G':
 			# clear the screen 
 			state = 1
-		elif key = 'E':
+		elif key == 'E':
 			endGame = 1
 			break
 		else;
 			state = 0 
 	if state == 1:
 		# initialize and generate map 
-		print("There are 3 Levels: 1-Easiest 3-Hardest)
+		print("There are 3 Levels: 1-Easiest 3-Hardest")
 		diff = raw_input("Enter a difficulty: ")
 		print(diff)
 		state = 2
