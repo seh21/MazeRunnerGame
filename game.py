@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import getch 
-
 # Declare initial positions of the Minotaur and Theseus 
 minotaur_x = 1
 minotaur_y = 1
@@ -18,10 +16,10 @@ key = -1 # user input key selection
 while endGame == 0:
 	if state == 0:
 		# print welcome screen 
-		print("**************************\n  THE MINOTAUR GAME")
-		print("By: Steph, Zach and Greg\n**************************")
-		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
-		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).")
+		print("**************************\n  THE MINOTAUR GAME  \n")
+		print("By: Steph, Zach and Greg\n**************************\n")
+		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must\n")
+		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).\n")
 		print("To begin, press G. To exit, press E.")
 		key = raw_input() # gets user input 
 		if key == 'G':
@@ -30,7 +28,7 @@ while endGame == 0:
 		elif key == 'E':
 			endGame = 1
 			break
-		else;
+		else:
 			state = 0 
 	if state == 1:
 		# initialize and generate map 
@@ -38,23 +36,21 @@ while endGame == 0:
 		diff = raw_input("Enter a difficulty: ")
 		print(diff)
 		state = 2
-	if state == 2:
-		thes_x_prev = thes_x
-		thes_y_prev = thes_y
-		
-		dir = getch.getch()
-		
-		if dir == 'd'
-			thes_x = thes_x + 1 
-		elif dir == 's'
-			thes_y = thes_y - 1 
-		elif dir == 'a'
-			thes_x = thes_x - 1
-		elif dir == 'w'
-			thes_y = thes_y + 1
-		elif dir == 'E'
-			# exit game 
-			break 
-		
-		
-		
+		endGame = 1
+#	if state == 2:
+#		thes_x_prev = thes_x
+#		thes_y_prev = thes_y
+#		
+#		dir = getch.getch()
+#		
+#		if dir == 'd'
+#			thes_x = thes_x + 1 
+#		elif dir == 's'
+#			thes_y = thes_y - 1 
+#		elif dir == 'a'
+#			thes_x = thes_x - 1
+#		elif dir == 'w'
+#			thes_y = thes_y + 1
+#		elif dir == 'E'
+#			# exit game 
+#			break 
