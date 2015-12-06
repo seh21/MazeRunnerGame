@@ -30,7 +30,7 @@ while endGame == 0:
 			break
 		else
 			state = 0 
-		os.system("clear")
+		os.system("clear") 	# clear screen 
 	if state == 1:
 		# initialize and generate map 
 		while goGame == 0
@@ -41,6 +41,8 @@ while endGame == 0:
 			if goGame == 0
 				print("Invalid difficulty!")
 		print(diff)
+		
+		os.system("clear") 	# clear screen 
 		if diff == 1
 			map_level = open('Level1.txt', 'r')
 		elif diff == 2
