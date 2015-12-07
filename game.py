@@ -78,4 +78,14 @@ while endGame == 0:
 		os.system("clear")	
 		currentMap = updateMap(player_x, player_y, player_x_prev, player_y_prev, currentMap)
 		
-		break
+		if player_x == 8 and player_y == 10:
+			state = 3
+	 
+	endGame = 0	
+	if state == 3:
+		choice = input("Nice Work!\nPress any key to continue or E to exit")
+		if choice == "E":
+			endGame = 1
+		else:
+			diff += 1
+			state = 1
