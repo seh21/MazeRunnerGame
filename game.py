@@ -2,7 +2,7 @@
 import os
 
 from level1 import makeLevel1
-from movement import move, wallCheck
+from movement import move, wallCheck, updateMap
 # Declare initial positions of the Minotaur and Theseus 
 minotaur_x = 1
 minotaur_y = 1
@@ -71,13 +71,11 @@ while endGame == 0:
 		if direction == "E":
 			endGame = 1
 		player_x, player_y = move(player_x, player_y, direction, currentMap)
+			
 		if wallCheck(player_x, player_y, currentMap) == 0:
-			print("wall")
-		elif wallCheck(player_x, player_y, currentMap) == 1:
-			print("good")
-		else:
-			print("nope")
-		break 
+			player_x = player_x_prev
+			player_y = player_y_prev
+		os.system("clear")	
+		currentMap = updateMap(player_x, player_y, player_x_prev, player_y_prev, currentMap)
 		
-		print(player_x)
-		endGame = 1
+		break
