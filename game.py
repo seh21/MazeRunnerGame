@@ -24,13 +24,6 @@ while endGame == 0:
 		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
 		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).")
 		print("To exit, press E.")
-		key = raw_input() # gets user input 
-		if key == 'E' or key == 'e':
-			goGame = 1
-			endGame = 1
-			break
-		else:
-			state = 0
 		while goGame == 0:
 			print("There are 3 Levels: 1-Easiest 3-Hardest")
 			diff = raw_input("Enter a difficulty: ")
