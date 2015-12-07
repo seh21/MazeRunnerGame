@@ -43,20 +43,20 @@ while endGame == 0:
 				print("Invalid difficulty!")
 		os.system("clear") 	# clear screen
 	if state == 1:
-		# initialize and generate map 
+		# initialize and display map 
 		
-		if diff == 1
-			with open("Level1.txt", "w+")
-				for line in file:
-					print line 
-		elif diff == 2
-			with open("Level2.txt", "w+")
-				for line in file:
-					print line 
-		elif diff == 3
-			with open("Level3.txt", "w+")
-				for line in file:
-					print line 
+		if diff == 1:
+			filename = "Level1.txt"
+			map_contents = open(filename)
+			print map_contents.read()
+		elif diff == 2:
+			filename = "Level2.txt"
+			map_contents = open(filename)
+			print map_contents.read()
+		elif diff == 3:
+			filename = "Level3.txt"
+			map_contents = open(filename)
+			print map_contents.read()
 			
 		state = 2
 		endGame = 1
