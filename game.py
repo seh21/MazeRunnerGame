@@ -35,6 +35,7 @@ while endGame == 0:
 			if goGame == 0:
 				print("Invalid difficulty!")
 		os.system("clear") 	# clear screen
+		state = 1
 	if state == 1:
 		# initialize and display map 
 		
@@ -51,8 +52,8 @@ while endGame == 0:
 			map_contents = open(filename)
 			print map_contents.read()
 			
-		state = 2
-		endGame = 1
+#		state = 2
+#		endGame = 1
 #	if state == 2:
 #		thes_x_prev = thes_x
 #		thes_y_prev = thes_y
