@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 import os
+
+from level1 import makeLevel1
+from movement import move, wallCheck
 # Declare initial positions of the Minotaur and Theseus 
 minotaur_x = 1
 minotaur_y = 1
 
-thes_x = 1
-thes_y = 7
+player_x = 1
+player_y = 1
 
 state = 0 # states of state machine
 diff = 1
@@ -39,34 +42,42 @@ while endGame == 0:
 	if state == 1:
 		# initialize and display map			
 		if diff == "1":
-			filename = "Level1.txt"
-			map_contents = open(filename)
-			print map_contents.read()
-		elif diff == 2:
-			filename = "Level1.txt"
-			map_contents = open(filename)
-			print map_contents.read()
-		elif diff == 3:
-			filename = "Level1.txt"
-			map_contents = open(filename)
-			print map_contents.read()
+			currentMap = makeLevel1()
+			for row in currentMap:
+				for val in row:
+					print '{:4}'.format(val),
+				print
+			
+		elif diff == "2":
+			currentMap = makeLevel1()
+			for row in currentMap:
+				for val in row:
+					print '{:4}'.format(val),
+				print
+
+		elif diff == "3":
+			currentMap = makeLevel1()
+			for row in currentMap:
+				for val in row:
+					print '{:4}'.format(val),
+				print
 		
 		state = 2
+	if state == 2:
+		player_x_prev = player_x
+		player_y_prev = player_y
+		
+		direction = raw_input()
+		if direction == "E":
+			endGame = 1
+		player_x, player_y = move(player_x, player_y, direction, currentMap)
+		if wallCheck(player_x, player_y, currentMap) == 0:
+			print("wall")
+		elif wallCheck(player_x, player_y, currentMap) == 1:
+			print("good")
+		else:
+			print("nope")
+		break 
+		
+		print(player_x)
 		endGame = 1
-#	if state == 2:
-#		thes_x_prev = thes_x
-#		thes_y_prev = thes_y
-#		
-#		dir = getch.getch()
-#		
-#		if dir == 'd'
-#			thes_x = thes_x + 1 
-#		elif dir == 's'
-#			thes_y = thes_y - 1 
-#		elif dir == 'a'
-#			thes_x = thes_x - 1
-#		elif dir == 'w'
-#			thes_y = thes_y + 1
-#		elif dir == 'E'
-#			# exit game 
-#			break 
