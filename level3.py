@@ -1,6 +1,9 @@
+# Level 3 for Maze Runner Game
 def makeLevel3():
+	# Definition of Range
 	maze = [[ " " for j in range(9)] for i in range(20)]
 	
+	# Use of '#' to show Boundary
 	for j in range(0, 19):
 		maze[j][8] = "#"
 	for j in range(0, 19):
@@ -25,6 +28,7 @@ def makeLevel3():
 		maze[j][4] = "#"
 	maze[10][5] = "#"
 	
+	# Use of '_' to show Traps/Landmines
 	for j in range(11, 15):
 		maze[j][6] = "_"
 	for j in range(10, 14):
@@ -38,7 +42,11 @@ def makeLevel3():
 	maze[6][5] = "_"
 	maze[6][7] = "_"
 	maze[2][4] = "_"
+	
+	# Use of ' ' to show exit
 	maze[10][8] = " "
+	
+	# Use of '0' to show player
 	maze[1][1] = "0"
 		
 	return maze
