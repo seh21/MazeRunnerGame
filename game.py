@@ -5,6 +5,7 @@ from level1 import makeLevel1
 from level2 import makeLevel2
 from level3 import makeLevel3
 from level4 import makeLevel4
+from level5 import makeLevel5
 from movement import move, wallCheck, trapCheck, leverCheck, updateMap
 
 state = 0 # states of state machine
@@ -12,7 +13,7 @@ diff = 1
 goGame = 0
 endGame = 0 # boolean for end of game 
 key = -1 # user input key selection
-
+lastLev = 0
 # Loop until game ends (player loses the game)
 while endGame == 0:
 	if state == 0:
@@ -25,7 +26,7 @@ while endGame == 0:
 		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).")
 		print("To exit, press E.")
 		while goGame == 0:
-			print("There are 3 Levels: 1-Easiest 3-Hardest")
+			print("There are 3 Levels: 1-Easiest 5-Hardest")
 			diff = raw_input("Enter a difficulty: ")
 			if diff < "6" and diff > "0":
 				goGame = 1
@@ -40,7 +41,8 @@ while endGame == 0:
 		# initialize and display map
 		player_x = 1
 		player_y = 1	
-		leverStage = 1		
+		leverStage = 1	
+		os.system("clear")
 		if diff == "1":
 			currentMap = makeLevel1()
 			for row in currentMap:
@@ -67,6 +69,13 @@ while endGame == 0:
 				for val in row:
 					print '{:4}'.format(val),
 				print	
+		elif diff == "5":
+			currentMap = makeLevel5()
+			for row in currentMap:
+				for val in row:
+					print '{:4}'.format(val),
+				print
+			lastLev = 1
 		state = 2
 	if state == 2:
 		player_x_prev = player_x
@@ -92,7 +101,11 @@ while endGame == 0:
 	 
 	endGame = 0	
 	if state == 3:
-		choice = raw_input("Nice Work!\nPress any key to continue or E to exit\n")
+		if lastLev == 0:
+			choice = raw_input("Nice Work!\nPress any key to continue or E to exit\n")
+		else:
+			print("You Win!")
+			break
 		if choice == "E":
 			endGame = 1
 		else:
@@ -102,3 +115,4 @@ while endGame == 0:
 	if state == 4:
 		print("You Died!\nPress any key to  exit\n")
 		endGame = 1
+			
