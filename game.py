@@ -23,7 +23,7 @@ while endGame == 0:
 		print("**************************\n    THE MAZE RUNNER")
 		print("By: Steph, Zach, and Greg\n**************************")
 		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
-		print("move the "0" to the exit (wall opening).")
+		print("move the 0 to the exit (wall opening).")
 		print("To exit, press E.")
 		while goGame == 0:
 			print("There are 3 Levels: 1-Easiest 5-Hardest")
