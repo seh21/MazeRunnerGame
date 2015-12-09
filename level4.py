@@ -21,7 +21,7 @@ def makeLevel4():
 	for j in range(1, 19):
 		maze[j][4] = "#"
 	
-	# Use of 'L' to show Trap
+	# Use of 'L' to show Lever
 	maze[3][2] = "L"
 	maze[3][6] = "L"
 	maze[8][2] = "L"
