@@ -26,7 +26,7 @@ while endGame == 0:
 		print("move the 0 to the exit (wall opening).")
 		print("To exit, press E.")
 		while goGame == 0:
-			print("There are 3 Levels: 1-Easiest 5-Hardest")
+			print("There are 5 Levels: 1-Easiest 5-Hardest")
 			diff = raw_input("Enter a difficulty: ")
 			if diff < "6" and diff > "0":
 				goGame = 1
