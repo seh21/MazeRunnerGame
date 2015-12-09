@@ -20,7 +20,7 @@ while endGame == 0:
 		# clear screen
 		os.system("clear");
 		# print welcome screen 
-		print("**************************\n  THE MAZE RUNNER")
+		print("**************************\n    THE MAZE RUNNER")
 		print("By: Steph, Zach, and Greg\n**************************")
 		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
 		print("move the "0" to the exit (wall opening).")
