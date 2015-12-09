@@ -1,3 +1,4 @@
+
 #File containing movement funtions
 def move(x_val, y_val, direction, currentMap):
 	if direction == "d":
@@ -56,6 +57,18 @@ def leverCheck(x_val, y_val, currentMap, level, stage):
 				currentMap[10][7] = " "
 				currentMap[11][7] = "#"
 			stage += 1
-
+		elif level == "5":
+			if stage == 1:
+				currentMap[3][1] = " "
+			elif stage == 2:
+				currentMap[3][5] = " "
+			elif stage == 3:
+				currentMap[13][5] = " "
+			elif stage == 4:
+				currentMap[13][2] = " "
+			elif stage == 5:
+				currentMap[8][5] = " "
+			elif stage == 6:
+				currentMap[10][7] = "#"
+			stage += 1
 	return currentMap, stage
-		
