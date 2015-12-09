@@ -1,6 +1,9 @@
+# Level 5 for Maze Runner Game
 def makeLevel5():
+	# Definition of Range
 	maze = [[ " " for j in range(9)] for i in range(20)]
 	
+	# Use of '#' for Boundary
 	for j in range(0, 19):
 		maze[j][8] = "#"
 	for j in range(0, 19):
@@ -10,6 +13,7 @@ def makeLevel5():
 	for j in range(0, 9):
 		maze[19][j] = "#"
 	
+	# Hard Coded Traps
 	maze[2][2] = "_"
 	maze[2][4] = "_"
 	maze[2][6] = "_"
@@ -58,7 +62,10 @@ def makeLevel5():
 	maze[18][4] = "_"
 	maze[18][5] = "L"
 	
+	# Use of ' ' to show Exit
 	maze[10][8] = " "
+	
+	# Use of '0' to show player
 	maze[1][1] = "0"
 	
 	return maze
