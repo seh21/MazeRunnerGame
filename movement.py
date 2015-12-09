@@ -1,5 +1,5 @@
 
-#File containing movement funtions
+#Function containing movement statements
 def move(x_val, y_val, direction, currentMap):
 	if direction == "d":
 		x_val += 1
@@ -11,6 +11,7 @@ def move(x_val, y_val, direction, currentMap):
 		y_val += 1
 	return x_val, y_val
 
+#F Functions containing wall boundaries
 def wallCheck(x_val, y_val, currentMap):
 	if currentMap[y_val][x_val] == "#":
 		value = 0
@@ -18,6 +19,7 @@ def wallCheck(x_val, y_val, currentMap):
 		value = 1
 	return value
 
+# Function for updating Map after move
 def updateMap(x_val, y_val, x_val_last, y_val_last, currentMap):
 	if x_val != x_val_last or y_val != y_val_last:
 		currentMap[y_val_last][x_val_last] = " "
@@ -28,6 +30,7 @@ def updateMap(x_val, y_val, x_val_last, y_val_last, currentMap):
 		print
 	return currentMap
 
+# Function for checking traps
 def trapCheck(x_val, y_val, currentMap):
 	if currentMap[y_val][x_val] == "_":
 		currentMap[y_val][x_val] = "^"
@@ -36,6 +39,7 @@ def trapCheck(x_val, y_val, currentMap):
 		value = 1
 	return value
 
+# Function for Levers
 def leverCheck(x_val, y_val, currentMap, level, stage):
 	if currentMap[y_val][x_val] == "L":
 		if level == "4":
