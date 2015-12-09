@@ -1,6 +1,9 @@
+# Level 1 for Maze Runner Game
 def makeLevel1():
+	# Definition of Range: Gameplay area
 	maze = [[ " " for j in range(9)] for i in range(20)]
 
+	# Use of '#' for borders
 	for j in range(0, 19):
 		maze[j][8] = "#"
 	for j in range(0, 19):
@@ -20,7 +23,6 @@ def makeLevel1():
 	for j in range(3, 7):
 		maze[j][4] = "#"
 	maze[9][7] = "#"
-
 	for j in range(5,7):
 		maze[3][j] = "#"
 	for j in range(3, 7):
@@ -31,9 +33,12 @@ def makeLevel1():
 		maze[j][4] = "#"
 	for j in range(15, 19):
 		maze[j][6] = "#"
+	# Use of ' ' to show Exit
 	maze[10][8] = " "
+	# Use of '0' to show player
 	maze[1][1] = "0"
 
+	#Formatting of Maze
 	for row in maze:
 		for val in row:
 			print '{:4}'.format(val),
