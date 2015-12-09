@@ -20,10 +20,10 @@ while endGame == 0:
 		# clear screen
 		os.system("clear");
 		# print welcome screen 
-		print("**************************\n  THE MINOTAUR GAME")
+		print("**************************\n  THE MAZE RUNNER")
 		print("By: Steph, Zach, and Greg\n**************************")
 		print("Use the keys A, S, W, and D to navigate\nthrough the maze. You must")
-		print("move Theseus (~) to the exit '>'\nwithout getting eaten by the Minotaur (<).")
+		print("move the "0" to the exit (wall opening).")
 		print("To exit, press E.")
 		while goGame == 0:
 			print("There are 3 Levels: 1-Easiest 5-Hardest")
