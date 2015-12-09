@@ -1,6 +1,9 @@
+# Level 2 for Maze Runner Game
 def makeLevel2():
+	#Definition of Range
 	maze = [[ " " for j in range(9)] for i in range(20)]
 	
+	# Use of '#' for boundary
 	for j in range(0, 19):
 		maze[j][8] = "#"
 	for j in range(0, 19):
@@ -31,11 +34,12 @@ def makeLevel2():
 	for j in range(2, 5):
 		maze[18][j] = "#"
 
+	# Use of ' 'to make openings and Exit
 	maze[10][6] = " "
 	maze[12][6] = " "
 	maze[13][6] = " "
 	maze[13][4] = "#"
+	# Use of '0' to show player
 	maze[1][1] = "0"
 
 	return maze
- 
